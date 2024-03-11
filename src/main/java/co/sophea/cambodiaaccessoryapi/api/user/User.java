@@ -2,7 +2,6 @@ package co.sophea.cambodiaaccessoryapi.api.user;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.time.LocalDateTime;
 
 @Setter
@@ -42,5 +41,6 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    private Boolean status;
+    @Column(name = "status")
+    private Boolean status = true;
 }

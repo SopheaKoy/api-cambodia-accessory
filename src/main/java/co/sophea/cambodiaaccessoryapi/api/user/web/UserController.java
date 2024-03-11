@@ -24,4 +24,10 @@ public class UserController {
         userService.createUser(userDto);
     }
 
+    // This using for user Find active
+    @GetMapping("/user-active")
+    List<User> getAllUserByStatus (){
+        return userService.findUserStatusTrue();
+    }
+
 }
