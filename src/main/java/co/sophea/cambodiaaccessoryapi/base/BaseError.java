@@ -1,4 +1,4 @@
-package co.sophea.cambodiaaccessoryapi.api.base;
+package co.sophea.cambodiaaccessoryapi.base;
 
 import lombok.Builder;
 
