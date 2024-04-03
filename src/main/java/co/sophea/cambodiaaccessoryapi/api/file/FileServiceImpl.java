@@ -15,7 +15,9 @@ import java.util.UUID;
 public class FileServiceImpl implements FileService{
     public static final String MAIN_FOLDER = "src/main/java/co/sophea/cambodiaaccessoryapi/";
 
+
     public FileDto uploadSingle(MultipartFile file) {
+
         // Check if the file is empty
         if (file.isEmpty()) {
             throw new IllegalArgumentException("File is empty");
@@ -43,6 +45,7 @@ public class FileServiceImpl implements FileService{
         }
 
         // Construct and return the FileDto object
+
 
 
         return null;

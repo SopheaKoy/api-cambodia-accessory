@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api/v1/files")
 @RequiredArgsConstructor
 public class FileController {
 
     private final FileService fileService;
-    @PostMapping(value = "/single", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+
+    @PostMapping(value = "/single-file", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public FileDto uploadSingle(@RequestPart MultipartFile file) {
         return fileService.uploadSingle(file);
     }
