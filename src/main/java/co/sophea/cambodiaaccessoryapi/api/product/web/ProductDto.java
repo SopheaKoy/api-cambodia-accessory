@@ -8,7 +8,8 @@ import java.util.List;
 @Builder
 public record ProductDto(String uuid,
                          String name,
-                         Integer quantity,
+                         String type,
                          Float price,
+                         String description,
                          List<String> images) {
 }

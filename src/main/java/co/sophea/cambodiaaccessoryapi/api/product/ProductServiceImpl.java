@@ -20,13 +20,14 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public void createNewProduct(ProductDto productDto) {
+    public Object createNewProduct(ProductDto productDto) {
 
         Product product =  Product.builder()
                 .uuid(UUID.randomUUID().toString())
                 .productName(productDto.name())
                 .price(productDto.price())
-                .quantity(productDto.quantity())
+                .Type(productDto.type())
+                .description(productDto.description())
                 .status(StatusEnum.DELETED.toString())
                 .createdAt(LocalDateTime.now())
                 .build();
@@ -34,6 +35,13 @@ public class ProductServiceImpl implements ProductService{
 
         productRepository.save(product);
 
+        return null;
     }
+
+    @Override
+    public void deleteProductById(int id) {
+        productRepository.deleteById(id);
+    }
+
 
 }

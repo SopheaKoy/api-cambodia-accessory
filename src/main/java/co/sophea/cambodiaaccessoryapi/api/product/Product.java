@@ -24,10 +24,12 @@ public class Product {
     @Column(name = "product_name" , length = 100)
     private String productName;
 
+    @Column(name = "type")
+    private String Type;
+
     @Column(name = "price")
     private Float price;
 
-    @Column(nullable = false)
     private Integer quantity;
 
     private String image;

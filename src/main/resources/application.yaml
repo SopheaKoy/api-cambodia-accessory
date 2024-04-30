@@ -1,14 +1,14 @@
 # Server Port
 server:
-  port: 8080
+  port: 8081
 
 # DB Configuration
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: admin123
+    password: borey1102
     username: postgres
-    url: jdbc:postgresql://localhost:5432/db_cambodia_accessory
+    url: jdbc:postgresql://localhost:5432/postgres
 
   jpa:
     show-sql: true
@@ -18,7 +18,7 @@ spring:
         format_sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
     open-in-view: true
 
 # JPA configuration
