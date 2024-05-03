@@ -9,5 +9,6 @@ public interface ProductService {
     List<Product> getAllProduct();
 
     Object createNewProduct(ProductDto productDto);
+
     void deleteProductById(int id);
 }

@@ -6,10 +6,9 @@ import lombok.Builder;
 import java.util.List;
 
 @Builder
-public record ProductDto(String uuid,
-                         String name,
+public record ProductDto(String name,
                          String type,
                          Float price,
                          String description,
-                         List<String> images) {
+                         String image) {
 }

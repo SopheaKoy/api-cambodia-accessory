@@ -37,6 +37,9 @@ dependencies {
 	// https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
 	implementation group: 'org.springdoc', name: 'springdoc-openapi-starter-webmvc-ui', version: '2.0.3'
 
+	implementation 'net.coobird:thumbnailator:0.4.13' // or the latest version
+
+
 }
 
 tasks.named('test') {

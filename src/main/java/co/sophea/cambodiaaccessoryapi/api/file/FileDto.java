@@ -1,4 +1,12 @@
 package co.sophea.cambodiaaccessoryapi.api.file;
 
-public class FileDto {
+import lombok.Builder;
+
+@Builder
+public record FileDto(String name,
+                      String url,
+                      String extension,
+
+                      String previewUrl,
+                      long size) {
 }

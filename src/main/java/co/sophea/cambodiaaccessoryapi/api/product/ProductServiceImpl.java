@@ -27,6 +27,7 @@ public class ProductServiceImpl implements ProductService{
                 .productName(productDto.name())
                 .price(productDto.price())
                 .Type(productDto.type())
+                .image(productDto.image())
                 .description(productDto.description())
                 .status(StatusEnum.DELETED.toString())
                 .createdAt(LocalDateTime.now())
@@ -35,7 +36,7 @@ public class ProductServiceImpl implements ProductService{
 
         productRepository.save(product);
 
-        return null;
+        return product;
     }
 
     @Override
